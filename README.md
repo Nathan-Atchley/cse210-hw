@@ -1,5 +1,5 @@
 # cse210-student-template
-Nathan wuz Here
+Nathan was Here
 
 This repository contains the starter code for many different projects. They are arranged as follows:
 
