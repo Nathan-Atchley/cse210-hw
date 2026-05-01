@@ -74,6 +74,7 @@ class Program
 
     static void na_printList(List<int> na_numbers)
     {
+        Console.WriteLine("The sorted list is: ");
         for (int i = 0; i < na_numbers.Count; i++)
         {
             Console.WriteLine(na_numbers[i]);
