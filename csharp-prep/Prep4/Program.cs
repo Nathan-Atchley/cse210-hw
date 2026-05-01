@@ -5,15 +5,18 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<int> numbers = na_getList();
-        int na_listSum = numbers.Sum();
-        double na_listAvg = numbers.Average();
-        int na_listMax = numbers.Max();
-        int na_listMinPositive = na_getSmallestPositive(numbers);
+        List<int> na_numbers = na_getList();
+        //The following orderBy was assisted by gemini Ai
+        List<int> sortedNumbers = na_numbers.OrderBy(n => n).ToList();
+        int na_listSum = na_numbers.Sum();
+        double na_listAvg = na_numbers.Average();
+        int na_listMax = na_numbers.Max();
+        int na_listMinPositive = na_getSmallestPositive(na_numbers);
         Console.WriteLine($"The sum is: {na_listSum}");
         Console.WriteLine($"The average is: {na_listAvg}");
         Console.WriteLine($"The largest number is: {na_listMax}");
         Console.WriteLine($"The smallest positive number is: {na_listMinPositive}");
+        na_printList(sortedNumbers);
     }
 
     static int na_getUserInputNumber(string na_prompt)
@@ -67,5 +70,13 @@ class Program
         }
         int na_min = na_modifiedNumbers.Min();
         return na_min;
+    }
+
+    static void na_printList(List<int> na_numbers)
+    {
+        for (int i = 0; i < na_numbers.Count; i++)
+        {
+            Console.WriteLine(na_numbers[i]);
+        }
     }
 }
