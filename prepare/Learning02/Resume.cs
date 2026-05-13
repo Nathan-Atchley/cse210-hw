@@ -5,13 +5,13 @@ public class Resume
     public string _name;
     public List<Job> _jobs = new List<Job>();
 
-    public void Display()
+    public string toString()
     {
-        Console.WriteLine($"Name: {_name}");
-        Console.WriteLine("Jobs:");
+        string rvalue = $"Name: {_name}\nJobs:\n";
         for (int i = 0; i < _jobs.Count(); i++)
         {
-            _jobs[i].Display();
+            rvalue += $"\t" + _jobs[i].toString() + $"\n";
         }
+        return rvalue;
     }
 }

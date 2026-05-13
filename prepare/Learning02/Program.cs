@@ -10,7 +10,7 @@ class Program
         job1._startYear = 2020;
         job1._endYear = 2026;
 
-        job1.Display();
+        Console.WriteLine(job1.toString());
 
         Job job2 = new Job();
         job2._jobTitle = "Manager";
@@ -18,13 +18,13 @@ class Program
         job2._startYear = 2010;
         job2._endYear = 2020;
 
-        job2.Display();
+        Console.WriteLine(job2);
 
         Resume myResume = new Resume();
         myResume._name = "Nathan Atchley";
         myResume._jobs.Add(job1);
         myResume._jobs.Add(job2);
 
-        myResume.Display();
+        Console.WriteLine(myResume.toString());
     }
 }
