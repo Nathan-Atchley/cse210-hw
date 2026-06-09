@@ -1,7 +1,14 @@
+// Nathan Atchley
+// 6/9/2026
+// Used information learned in class and listed in the assignment page.
+// Used Gemini to look over the program and to suggest additions.
+// https://gemini.google.com/share/ecce5241a45c
 public class Listing : Activity
 {
     private List<string> _prompts_na;
+    private List<int> _promptsIndexesUsed_na;
     private List<string> _responses_na;
+    private List<int> _responsesIndexesUsed_na;
     private Random _random_na;
 
     public Listing() : base("Listing", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.")
@@ -21,7 +28,22 @@ public class Listing : Activity
     public void PrintRandPrompt()
     {
         Console.WriteLine("List as many responses you can to the following prompt:");
-        Console.WriteLine($" --- {_prompts_na[_random_na.Next(_prompts_na.Count())]} --- ");
+        bool RandomFlag_na = true;
+        int PromptIndex_na = 0;
+        while (RandomFlag_na)
+        {
+            PromptIndex_na = _random_na.Next(_prompts_na.Count());
+            if (!_promptsIndexesUsed_na.Contains(PromptIndex_na))
+            {
+                _promptsIndexesUsed_na.Add(PromptIndex_na);
+                RandomFlag_na = false;
+            }
+            if (_promptsIndexesUsed_na.Count == _prompts_na.Count())
+            {
+                _promptsIndexesUsed_na.Clear();
+            }
+        }
+        Console.WriteLine($" --- {_prompts_na[PromptIndex_na]} --- ");
         Console.Write("You may begin in: ");
         Countdown(8);
         Console.WriteLine("");

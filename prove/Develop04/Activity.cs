@@ -1,3 +1,8 @@
+// Nathan Atchley
+// 6/9/2026
+// Used information learned in class and listed in the assignment page.
+// Used Gemini to look over the program and to suggest additions.
+// https://gemini.google.com/share/ecce5241a45c
 public class Activity
 {
     private int _duration_na;
