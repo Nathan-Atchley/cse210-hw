@@ -3,6 +3,8 @@
 // Used information learned in class and listed in the assignment page.
 // Used Gemini to look over the program and to suggest additions.
 // https://gemini.google.com/share/ecce5241a45c
+
+//Went above and beyond by making the random choose unique objects each time
 public class Reflection : Activity
 {
     private List<string> _questions_na;
@@ -32,6 +34,8 @@ public class Reflection : Activity
             "Think of a time when you helped someone in need.",
             "Think of a time when you did something truly selfless."
         };
+        _questionsIndexesUsed_na = new List<int> {};
+        _promptsIndexesUsed_na = new List<int> {};
         _random_na = new Random();
     }
 

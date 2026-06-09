@@ -3,12 +3,13 @@
 // Used information learned in class and listed in the assignment page.
 // Used Gemini to look over the program and to suggest additions.
 // https://gemini.google.com/share/ecce5241a45c
+
+//Went above and beyond by making the random choose unique objects each time
 public class Listing : Activity
 {
     private List<string> _prompts_na;
     private List<int> _promptsIndexesUsed_na;
     private List<string> _responses_na;
-    private List<int> _responsesIndexesUsed_na;
     private Random _random_na;
 
     public Listing() : base("Listing", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.")
@@ -22,6 +23,7 @@ public class Listing : Activity
             "Who are some of your personal heroes?"
         };
         _responses_na = new List<string> {};
+        _promptsIndexesUsed_na = new List<int> {};
         _random_na = new Random();
     }
 
@@ -64,6 +66,7 @@ public class Listing : Activity
             StartTime_na = DateTime.Now;
         }
         Console.WriteLine($"You listed {_responses_na.Count()}!\n");
+        _responses_na.Clear();
         EndMessage();
     }
 }
