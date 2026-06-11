@@ -24,7 +24,7 @@ public class Activity
         int spinnerCharsIndex = 0;
         while (currTime_na < endTime_na)
         {
-            Console.Write(spinnerChars[spinnerCharsIndex % spinnerChars.Count()]);
+            Console.Write(spinnerChars[spinnerCharsIndex % spinnerChars.Count]);
             Thread.Sleep(180);
             Console.Write("\b \b");
             spinnerCharsIndex += 1;

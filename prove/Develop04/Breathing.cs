@@ -25,6 +25,7 @@ public class Breathing : Activity
         GetReady(3);
         DateTime StartTime_na =  DateTime.Now;
         SetEndTime(StartTime_na);
+
         Breath(2);
         StartTime_na = DateTime.Now;
         while (StartTime_na < GetEndTime())
@@ -32,6 +33,7 @@ public class Breathing : Activity
             Breath(4);
             StartTime_na = DateTime.Now;
         }
+        
         EndMessage();
     }
 }
