@@ -1,0 +1,6 @@
+24357
+SimpleGoal,test,testing,23332,True
+EternalGoal,test,eternaltest,232
+ChecklistGoal,fun,times,69,420,10,6
+SimpleGoal,3,34,234,True
+Reward,fun,times,10
