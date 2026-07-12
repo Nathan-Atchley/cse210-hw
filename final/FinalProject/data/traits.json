@@ -1,0 +1,428 @@
+[
+    {
+        "Name_na": "Item Catcher",
+        "Description_na": "If a foe throws an item at you, roll a d4. On a 4, take no damage, and take the item for yourself.",
+        "Prerequisites_na": 1,
+        "Cost_na": 1
+    },
+    {
+        "Name_na": "Nontraitor",
+        "Description_na": "If Confused, your randomly-aimed attacks will not target allies. This does not affect your attacks when Blinded, as you cannot identify allies from enemies in that state.",
+        "Prerequisites_na": 1,
+        "Cost_na": 1
+    },
+    {
+        "Name_na": "Type Novice",
+        "Description_na": "Your super-effective attacks deal 2 additional damage.",
+        "Prerequisites_na": 1,
+        "Cost_na": 1
+    },
+    {
+        "Name_na": "Cheerleader",
+        "Description_na": "Allies within one space of you deal +2 damage with their attacks.",
+        "Prerequisites_na": 1,
+        "Cost_na": 1
+    },
+    {
+        "Name_na": "Actor",
+        "Description_na": "Three times daily you may use Performance instead of any other skill, by explaining how your acting prowess resolves the situation.",
+        "Prerequisites_na": 1,
+        "Cost_na": 1
+    },
+    {
+        "Name_na": "Anchor",
+        "Description_na": "You cannot be warped, pushed, or blown away.",
+        "Prerequisites_na": 1,
+        "Cost_na": 1
+    },
+    {
+        "Name_na": "Fame",
+        "Description_na": "You are well-known and NPCs may treat you favorably for it.",
+        "Prerequisites_na": 1,
+        "Cost_na": 1
+    },
+    {
+        "Name_na": "Brick-Tough",
+        "Description_na": "Gain an additional 10HP.",
+        "Prerequisites_na": 1,
+        "Cost_na": 1
+    },
+    {
+        "Name_na": "Evaluator",
+        "Description_na": "You can accurately tell a foe's remaining HP, as well as its moves and ability.",
+        "Prerequisites_na": 1,
+        "Cost_na": 1
+    },
+    {
+        "Name_na": "Unencumbered",
+        "Description_na": "You can carry twice your weight without reducing your movement per turn. This includes carrying allies.",
+        "Prerequisites_na": 1,
+        "Cost_na": 1
+    },
+    {
+        "Name_na": "Breach",
+        "Description_na": "When your party initiates a surprise round, any attack your perform during this round deals +25% extra damage after calculations.",
+        "Prerequisites_na": 1,
+        "Cost_na": 1
+    },
+    {
+        "Name_na": "Relay",
+        "Description_na": "You can pass items up to 30 feet in combat without spending your Flight action, without traversing terrain, and without needing to roll for an accurate throw.",
+        "Prerequisites_na": 1,
+        "Cost_na": 1
+    },
+    {
+        "Name_na": "Power Pitcher",
+        "Description_na": "Thrown items/ranged weapons deal an additional 50% damage, after weaponry modifiers are applied.",
+        "Prerequisites_na": 5,
+        "Cost_na": 2
+    },
+    {
+        "Name_na": "Pushy",
+        "Description_na": "When you land an attack on a foe, you may choose to reduce the damage by 1 to 3 points and move the target that many spaces in any direction.",
+        "Prerequisites_na": 5,
+        "Cost_na": 2
+    },
+    {
+        "Name_na": "Bodyguard",
+        "Description_na": "If an ally is below 1/4 HP, you may take damage in their stead, permitted you are within 60 feet of them.",
+        "Prerequisites_na": 5,
+        "Cost_na": 2
+    },
+    {
+        "Name_na": "Self-Curer",
+        "Description_na": "You recover from status problems twice as quickly, reducing the counter by 2 every round instead of 1.",
+        "Prerequisites_na": 5,
+        "Cost_na": 2
+    },
+    {
+        "Name_na": "Invigorator",
+        "Description_na": "When you heal an ally in combat, they gain a +1 stage speed boost.",
+        "Prerequisites_na": 5,
+        "Cost_na": 2
+    },
+    {
+        "Name_na": "Hazard Setter",
+        "Description_na": "When you create an area hazard (spikes, stealth rocks, etc), your hazard covers a 20ft square or cube instead of a 10ft one.",
+        "Prerequisites_na": 5,
+        "Cost_na": 2
+    },
+    {
+        "Name_na": "Targeter",
+        "Description_na": "If you attacked a foe in your previous turn and choose to target them again, deal an additional 2 damage.",
+        "Prerequisites_na": 5,
+        "Cost_na": 2
+    },
+    {
+        "Name_na": "Gap Prober",
+        "Description_na": "Ignore allies and partial cover in the way when making ranged attacks.",
+        "Prerequisites_na": 5,
+        "Cost_na": 2
+    },
+    {
+        "Name_na": "Iron Stomach",
+        "Description_na": "You can safely eat spoiled food without negative effects. You may also supplement your diet with unconventional matter such as tough roots, bones or otherwise inedible matter, regaining 10% of your stomach fullness for every ~250g of this matter you consume.",
+        "Prerequisites_na": 5,
+        "Cost_na": 2
+    },
+    {
+        "Name_na": "Instructor",
+        "Description_na": "Once daily, an ally may use your skill score instead of theirs.",
+        "Prerequisites_na": 5,
+        "Cost_na": 2
+    },
+    {
+        "Name_na": "Nonsleeper",
+        "Description_na": "You cannot be put to sleep by traps or enemy attacks.",
+        "Prerequisites_na": 5,
+        "Cost_na": 2
+    },
+    {
+        "Name_na": "Light Sleeper",
+        "Description_na": "If an enemy moves within the same room while you are asleep, or within 30 feet of you in an open space, you will instantly awaken.",
+        "Prerequisites_na": 5,
+        "Cost_na": 2
+    },
+    {
+        "Name_na": "Wary Fighter",
+        "Description_na": "If you miss an attack, you may move back one space.",
+        "Prerequisites_na": 5,
+        "Cost_na": 2
+    },
+    {
+        "Name_na": "Preferred Terrain",
+        "Description_na": "50% speed boost when on your preferred terrain.",
+        "Prerequisites_na": 5,
+        "Cost_na": 2
+    },
+    {
+        "Name_na": "Forager",
+        "Description_na": "When foraging, you gain twice as many items.",
+        "Prerequisites_na": 5,
+        "Cost_na": 2
+    },
+    {
+        "Name_na": "Inventive",
+        "Description_na": "You may treat Improvised Weaponry as if it were Melee Weaponry when it comes to damage calculations.",
+        "Prerequisites_na": 5,
+        "Cost_na": 2
+    },
+    {
+        "Name_na": "Hardy",
+        "Description_na": "If an attack would reduce you to 0HP, roll a d10. On a 10, you hang on at 1 HP.",
+        "Prerequisites_na": 10,
+        "Cost_na": 5
+    },
+    {
+        "Name_na": "Danger Sense",
+        "Description_na": "You may act during enemy surprise rounds and cannot be ambushed or taken by surprise.",
+        "Prerequisites_na": 10,
+        "Cost_na": 5
+    },
+    {
+        "Name_na": "Streak Hitter",
+        "Description_na": "If your attack reduces a foe to 0HP, you may refresh your Fight action and attack again.",
+        "Prerequisites_na": 10,
+        "Cost_na": 5
+    },
+    {
+        "Name_na": "Focused",
+        "Description_na": "Your attacks have a +20% accuracy boost. However, enemy attacks towards you have a +10% accuracy boost.",
+        "Prerequisites_na": 10,
+        "Cost_na": 5
+    },
+    {
+        "Name_na": "Prolong",
+        "Description_na": "Statuses inflicted on foes last 3 additional rounds.",
+        "Prerequisites_na": 10,
+        "Cost_na": 5
+    },
+    {
+        "Name_na": "Wise Healer",
+        "Description_na": "When you heal yourself using an item, move or skill roll, or heal an ally using an item or skill roll, heal additional HP equals to your level.",
+        "Prerequisites_na": 10,
+        "Cost_na": 5
+    },
+    {
+        "Name_na": "Deep Breather",
+        "Description_na": "If you spend your turn without taking or dealing damage, restore 5PP to all of your moves.",
+        "Prerequisites_na": 10,
+        "Cost_na": 5
+    },
+    {
+        "Name_na": "Practice Swinger",
+        "Description_na": "If you miss an attack, your next one deals +3 damage.",
+        "Prerequisites_na": 10,
+        "Cost_na": 5
+    },
+    {
+        "Name_na": "Light Stepper",
+        "Description_na": "You do not alert sleeping foes by walking near them.",
+        "Prerequisites_na": 10,
+        "Cost_na": 5
+    },
+    {
+        "Name_na": "Dizzying Payback",
+        "Description_na": "10% chance of foes who hit you becoming confused.",
+        "Prerequisites_na": 10,
+        "Cost_na": 5
+    },
+    {
+        "Name_na": "Distance Dodge",
+        "Description_na": "Foes that are five or more spaces away take a 20% accuracy debuff when making ranged attacks against you.",
+        "Prerequisites_na": 10,
+        "Cost_na": 5
+    },
+    {
+        "Name_na": "Meditative Hunger",
+        "Description_na": "When your stomach is below 50% full, you receive a +10% accuracy bonus to your attacks.",
+        "Prerequisites_na": 10,
+        "Cost_na": 5
+    },
+    {
+        "Name_na": "Retaliate",
+        "Description_na": "Deal +2 damage to foes who attacked your allies in their last turn.",
+        "Prerequisites_na": 10,
+        "Cost_na": 5
+    },
+    {
+        "Name_na": "PP Saver",
+        "Description_na": "When attacking, roll 1d6. On a 6, you do not consume PP.",
+        "Prerequisites_na": 10,
+        "Cost_na": 5
+    },
+    {
+        "Name_na": "Battle Thirst",
+        "Description_na": "When you land a critical hit, regain HP equals to your level.",
+        "Prerequisites_na": 10,
+        "Cost_na": 5
+    },
+    {
+        "Name_na": "Type Bulldozer",
+        "Description_na": "Your 'not very effective' attacks do normal damage.",
+        "Prerequisites_na": 10,
+        "Cost_na": 5
+    },
+    {
+        "Name_na": "Cheery",
+        "Description_na": "When making a positive Persuasion roll – such as trying to cheer up or calm down a target – you may reroll once if you fail.",
+        "Prerequisites_na": 10,
+        "Cost_na": 5
+    },
+    {
+        "Name_na": "Aggressor",
+        "Description_na": "Apply a x1.5 multiplier to your Attack and Special Attack. However, you must also decrease your Defense and Special Defense by 3.",
+        "Prerequisites_na": 15,
+        "Cost_na": 8
+    },
+    {
+        "Name_na": "Defender",
+        "Description_na": "Apply a x1.5 multiplier to your Defense and Special Defense. However, you must also decrease your Attack and Special Attack by 3.",
+        "Prerequisites_na": 15,
+        "Cost_na": 8
+    },
+    {
+        "Name_na": "Sharpshooter",
+        "Description_na": "Your attacks crit at 20 or below.",
+        "Prerequisites_na": 15,
+        "Cost_na": 8
+    },
+    {
+        "Name_na": "Buddy Boost",
+        "Description_na": "At the beginning of combat, you may move up to three members of your party, including yourself, one space up in the initiative order.",
+        "Prerequisites_na": 15,
+        "Cost_na": 8
+    },
+    {
+        "Name_na": "Preferred Weather",
+        "Description_na": "+3 to defending stats during your preferred weather.",
+        "Prerequisites_na": 15,
+        "Cost_na": 8
+    },
+    {
+        "Name_na": "Haggler",
+        "Description_na": "Merchants will reduce their prices by (1d4x10)% for you.",
+        "Prerequisites_na": 15,
+        "Cost_na": 8
+    },
+    {
+        "Name_na": "Long Reach",
+        "Description_na": "Your attacks are increased in range by 1 space.",
+        "Prerequisites_na": 15,
+        "Cost_na": 8
+    },
+    {
+        "Name_na": "Fast Healer",
+        "Description_na": "Passively regain HP equals to your level at the start of your turn in combat, or every 10 minutes outside of combat.",
+        "Prerequisites_na": 15,
+        "Cost_na": 8
+    },
+    {
+        "Name_na": "Clutch Dodge",
+        "Description_na": "When you're below 25% HP, the accuracy of any enemy targeting you is reduced by 20%.",
+        "Prerequisites_na": 15,
+        "Cost_na": 8
+    },
+    {
+        "Name_na": "Trap Buster",
+        "Description_na": "50% chance of destroying traps and area hazards instead of triggering their effects.",
+        "Prerequisites_na": 15,
+        "Cost_na": 8
+    },
+    {
+        "Name_na": "Nature Gifter",
+        "Description_na": "Share the effects of berries with adjacent allies.",
+        "Prerequisites_na": 15,
+        "Cost_na": 8
+    },
+    {
+        "Name_na": "Coin Watcher",
+        "Description_na": "When picking up Poké in dungeons, you gain 50% more than usual.",
+        "Prerequisites_na": 15,
+        "Cost_na": 8
+    },
+    {
+        "Name_na": "Protective",
+        "Description_na": "If one of your allies is reduced to 0HP by an enemy's attack within 60 feet of you, you may reactively attack the pokémon that caused them to faint. This attack is a guaranteed critical hit.",
+        "Prerequisites_na": 15,
+        "Cost_na": 8
+    },
+    {
+        "Name_na": "Deep Pockets",
+        "Description_na": "You may benefit from two held items at once.",
+        "Prerequisites_na": 15,
+        "Cost_na": 8
+    },
+    {
+        "Name_na": "Critical Dodger",
+        "Description_na": "You are not affected by critical hits, as if by the Battle Armor ability.",
+        "Prerequisites_na": 20,
+        "Cost_na": 10
+    },
+    {
+        "Name_na": "No-Charger",
+        "Description_na": "Moves that would require two turns to charge are unleashed in one turn, but consume 2 PP.",
+        "Prerequisites_na": 20,
+        "Cost_na": 10
+    },
+    {
+        "Name_na": "Underdog",
+        "Description_na": "When outnumbered, deal +2 damage for each foe you're outnumbered by.",
+        "Prerequisites_na": 20,
+        "Cost_na": 10
+    },
+    {
+        "Name_na": "Terraformer",
+        "Description_na": "Using your Flight action, you may move and shape up to 10 by 10 feet of matter such as dirt, rock or sand to create cover or an obstacle.",
+        "Prerequisites_na": 20,
+        "Cost_na": 10
+    },
+    {
+        "Name_na": "Wrecking Ball",
+        "Description_na": "Your attacks deal double damage to structures.",
+        "Prerequisites_na": 20,
+        "Cost_na": 10
+    },
+    {
+        "Name_na": "Preparation",
+        "Description_na": "At dawn, roll two d100+d10, giving you two numbers from 1-100. At any point you may replace the result of a roll with one of those numbers, whether the roll was made by an ally, an enemy, or yourself.",
+        "Prerequisites_na": 20,
+        "Cost_na": 10
+    },
+    {
+        "Name_na": "Impenetrable Block",
+        "Description_na": "Three times daily, you may halve any incoming damage.",
+        "Prerequisites_na": 20,
+        "Cost_na": 10
+    },
+    {
+        "Name_na": "Perfect Health",
+        "Description_na": "Gain +50 max HP.",
+        "Prerequisites_na": 20,
+        "Cost_na": 10
+    },
+    {
+        "Name_na": "Legend Hunter",
+        "Description_na": "Deal double damage to one of the following: Legendary pokémon, Mythical pokémon, Ultra Beasts, or Paradox Pokémon. You have a sixth sense for when one is within five miles of you and know its approximate direction.",
+        "Prerequisites_na": 20,
+        "Cost_na": 10
+    },
+    {
+        "Name_na": "Coverage",
+        "Description_na": "Gain a fifth move slot.",
+        "Prerequisites_na": 20,
+        "Cost_na": 10
+    },
+    {
+        "Name_na": "Ability Patcher",
+        "Description_na": "At dawn, you may choose which of your species' available abilities to have for the day.",
+        "Prerequisites_na": 20,
+        "Cost_na": 10
+    },
+    {
+        "Name_na": "Type Advantage Master",
+        "Description_na": "Instead of x2 damage, your super-effective attacks deal x3 damage. Quad-super-effective attacks deal x6 damage instead of x4 damage.",
+        "Prerequisites_na": 20,
+        "Cost_na": 10
+    }
+]

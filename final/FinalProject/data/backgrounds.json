@@ -1,0 +1,62 @@
+[
+  {
+    "Name_na": "Adventurer",
+    "Description_na": "You delve fearlessly into the deepest dungeons.",
+    "GrantedTrait_na": "Item Catcher",
+    "Poke_na": 150,
+    "Items_na": [
+      "a week's worth of rations",
+      "one oran berry",
+      "one stun seed",
+      "a trapbust orb"
+    ]
+  },
+  {
+    "Name_na": "Explorer",
+    "Description_na": "Conquering the untamed wild, you seek out marvellous places.",
+    "GrantedTrait_na": "Anchor",
+    "Poke_na": 100,
+    "Items_na": [
+      "two weeks' worth of rations",
+      "three oran berries",
+      "three escape orbs"
+    ]
+  },
+  {
+    "Name_na": "Researcher",
+    "Description_na": "Time can hide no secrets from you and your thirst for knowledge.",
+    "GrantedTrait_na": "Evaluator",
+    "Poke_na": 100,
+    "Items_na": [
+      "a week's worth of rations",
+      "two oran berries",
+      "two heal seeds",
+      "a scanner orb"
+    ]
+  },
+  {
+    "Name_na": "Prodigy",
+    "Description_na": "You have been gifted with magnificent talents, or blessed by luck.",
+    "GrantedTrait_na": "Type Novice",
+    "Poke_na": 50,
+    "Items_na": [
+      "a week's worth of rations",
+      "one oran berry",
+      "a stun seed",
+      "a reviver seed"
+    ]
+  },
+  {
+    "Name_na": "Outlaw",
+    "Description_na": "You're fleeing from your past. Perhaps one day you'll face it.",
+    "GrantedTrait_na": "Actor",
+    "Poke_na": 50,
+    "Items_na": [
+      "three days' worth of rations",
+      "two oran berries",
+      "a blinker seed",
+      "a trawl orb",
+      "an escape orb"
+    ]
+  }
+]
