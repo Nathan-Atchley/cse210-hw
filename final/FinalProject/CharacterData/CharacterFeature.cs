@@ -1,7 +1,4 @@
 namespace FinalProject.CharacterData;
-using FinalProject.View;
-using FinalProject.API;
-using FinalProject.CharacterData;
 public class CharacterFeature
 {
     public string Name_na { get ; }
@@ -16,5 +13,5 @@ public class CharacterFeature
         Prerequisites_na = prerequisites_na;
     }
 
-    public virtual void ApplyToCharacter(){}
+    public virtual void ApplyToCharacter(Character player_na){}
 }

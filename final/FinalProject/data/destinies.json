@@ -1,0 +1,217 @@
+[
+    {
+        "Name_na": "Archaeologist",
+        "Description_na": "You are skilled in decoding the Sands of Time. At level 15, the Seas of Time bend to your scholarly genius.",
+        "FlavorText_na": "Ancient ruins, fallen cities: the past's remnants whisper, if you listen.",
+        "Prerequisites_na": 5,
+        "BonusSkills_na": [
+            "Special Knowledge (History)",
+            "Perception"
+        ],
+        "BonusProficiency_na": "Archaeology Kit",
+        "Lv5FeatureName_na": "Sands of Time",
+        "Lv5FeatureDesc_na": "By spending at least 30 minutes studying an object or structure, you can accurately tell what pokémon in the past have interacted with it, as well as its purpose, any legends or rumours regarding it, magical effects, and hidden functions.",
+        "Lv15FeatureName_na": "Seas of Time",
+        "Lv15FeatureDesc_na": "Once daily you may study an object or place and declare a fact of the past to be true, and its effects on the present day. If the Guild Master permits, this knowledge is written into canon. This may include hidden paths created by geological events, shelter spaces used by ancient civilisations, or resources found as remnants of long-past battles."
+    },
+    {
+        "Name_na": "Detective",
+        "Description_na": "Keen Intuition helps you solve mind-boggling mysteries. At level 15, you are known for Flawless Deduction.",
+        "FlavorText_na": "Truth can be elusive, but it won't escape me. Not again.",
+        "Prerequisites_na": 5,
+        "BonusSkills_na": [
+            "Perception",
+            "Persuasion"
+        ],
+        "BonusProficiency_na": "Forensics Kit",
+        "Lv5FeatureName_na": "Keen Intuition",
+        "Lv5FeatureDesc_na": "Thrice daily you can call upon your skills for insight. The Guild Master will give you two truths and one lie about any situation, individual, place, event or item. Though the truths are guaranteed to be reliable, you must decipher for yourself which is the lie.",
+        "Lv15FeatureName_na": "Flawless Deduction",
+        "Lv15FeatureDesc_na": "By cashing in three pieces of relevant evidence, you can ask the Guild Master one question, which they have to answer truthfully. You can continue for as long as you have valid evidence to spend."
+    },
+    {
+        "Name_na": "Dungeoneer",
+        "Description_na": "You explore with keen Momentum, aiming to be an Expert Dungeoneer.",
+        "FlavorText_na": "Mystery dungeons have always been my home, more than any town.",
+        "Prerequisites_na": 5,
+        "BonusSkills_na": [
+            "Athletics",
+            "Survival"
+        ],
+        "BonusProficiency_na": "Camping Gear",
+        "Lv5FeatureName_na": "Momentum",
+        "Lv5FeatureDesc_na": "When you make a successful skill roll in a dungeon, you gain one point of momentum. You can store momentum equals to your level. You lose one point after failing a roll, and all momentum by leaving the dungeon or fainting.\n- Each point of stored momentum, up to 5, boosts your speed by 1.\n- At 5 stored momentum, your attacks deal +3 extra damage.\n- Send one point to reduce incoming damage by 1.\n- Spend one point to add 5% to the success chance of a roll.\n- Spend three points to perform a Basic Attack after landing a move.\n- Spend five points to instantly shrug off a status condition.\n- Spend ten points or more points to revive after a knockout blow, with HP equals to the amount spent.",
+        "Lv15FeatureName_na": "Expert Dungeoneer",
+        "Lv15FeatureDesc_na": "You may, before entering a dungeon, make three claims about it, two of which are then written into truth. These may be about the pokémon, items, secrets, terrain, reputation, etc. If the Guild Master permits, the chosen two facts are written into canon and become true for all future visits."
+    },
+    {
+        "Name_na": "Folk Hero",
+        "Description_na": "You have a need to help others, and do so with Surmounting Wit until your Legend becomes Folk Mythology.",
+        "FlavorText_na": "The pokémon around me are the real treasure.",
+        "Prerequisites_na": 5,
+        "BonusSkills_na": [
+            "Persuasion",
+            "Craft"
+        ],
+        "BonusProficiency_na": "Carpenter's Tools",
+        "Lv5FeatureName_na": "Surmounting Wit",
+        "Lv5FeatureDesc_na": "You thrive in difficult situations. If outnumbered, outlevelled, trapped in a precarious position, or if a party member is unconscious from fainting, you gain +10% to all skill rolls.",
+        "Lv15FeatureName_na": "Folk Mythology",
+        "Lv15FeatureDesc_na": "Once daily, you may escape a tough situation by describing one of your feats from a folk tale, instead of making a Critical Roll. For example, that you scared off a rampaging gyarados, or leapt over a ravine three copperajah wide. Keep track of your folk tale feats as you use them, for future reference."
+    },
+    {
+        "Name_na": "Mercenary",
+        "Description_na": "You strike with Desperation and lethal Hunter's Prowess.",
+        "FlavorText_na": "With no home, no honour, and nothing to lose, my skills are all I can depend on.",
+        "Prerequisites_na": 5,
+        "BonusSkills_na": [
+            "Endurance",
+            "Stealth"
+        ],
+        "BonusProficiency_na": "Trapmaking Tools",
+        "Lv5FeatureName_na": "Desperation",
+        "Lv5FeatureDesc_na": "Your skills hone as your HP lowers. At 50% HP, you gain +1 to attacking stats. At 25%, you gain +3. At 0 HP, you may continue fighting for 1d4 rounds with a +5 to your attacking stats, before falling unconscious. You remain unconscious for 4d6 hours, even if healed.",
+        "Lv15FeatureName_na": "Hunter's Prowess",
+        "Lv15FeatureDesc_na": "Using an item with the pokémon's scent or print, you may assign yourself a target to hunt. You always roughly know their location, move twice as fast when in the same dungeon, deal double damage if they are below half HP, and allies may add your Atk or Sp. Atk to their own when attacking them. You may only change targets 24 hours after your previous target has been neutralised."
+    },
+    {
+        "Name_na": "Mythbound",
+        "Description_na": "A chance encounter with a mythical pokémon allows you to Call Upon Myth or, later, Summon Myth.",
+        "FlavorText_na": "My life has been forever touched by something mysterious and wonderful.",
+        "Prerequisites_na": 5,
+        "BonusSkills_na": [
+            "Finesse",
+            "Special Knowledge (Mythology)"
+        ],
+        "BonusProficiency_na": "Artist's Tools of choice",
+        "Lv5FeatureName_na": "Call Upon Myth",
+        "Lv5FeatureDesc_na": "Depending on your chosen mythical patron, you may activate a special ability once per day.",
+        "PatronOptions_na": [
+            {
+                "Pokemon_na": [
+                    "Celebi",
+                    "Hoopa"
+                ],
+                "Effect_na": "Move 10 spaces in any direction, including through obstacles."
+            },
+            {
+                "Pokemon_na": [
+                    "Manaphy",
+                    "Keldeo"
+                ],
+                "Effect_na": "Double swim speed and gain (or grant to one ally) the ability to breathe underwater for 30 mins."
+            },
+            {
+                "Pokemon_na": [
+                    "Meloetta",
+                    "Magearna"
+                ],
+                "Effect_na": "Read the thoughts and emotions of pokémon within ten tiles."
+            },
+            {
+                "Pokemon_na": [
+                    "Victini",
+                    "Marshadow"
+                ],
+                "Effect_na": "Make one attack a guaranteed critical hit."
+            },
+            {
+                "Pokemon_na": [
+                    "Diancie",
+                    "Jirachi"
+                ],
+                "Effect_na": "Materialise a gem worth 500 P, or one reviver seed."
+            },
+            {
+                "Pokemon_na": [
+                    "Shaymin",
+                    "Mew"
+                ],
+                "Effect_na": "Cure allies of statuses and cleanse a 5 space radius."
+            },
+            {
+                "Pokemon_na": [
+                    "Pecharunt",
+                    "Darkrai"
+                ],
+                "Effect_na": "Give a target a one-word order that they must fulfill."
+            },
+            {
+                "Pokemon_na": [
+                    "Genesect",
+                    "Meltan"
+                ],
+                "Effect_na": "Reduce incoming damage by 1d6 x your level and reflect it back to attacker."
+            },
+            {
+                "Pokemon_na": [
+                    "Zeraora",
+                    "Zarude"
+                ],
+                "Effect_na": "Deal 1d6 x your level damage to the nearest foe and dash 5 spaces."
+            }
+        ],
+        "Lv15FeatureName_na": "Summon Myth",
+        "Lv15FeatureDesc_na": "Your bond with your mythical patron has grown into a close friendship. You may summon them as an ally at any time. Fill in a Sidekick Sheet for them at Sidekick Level 5; you can also now use Call Upon Myth three times daily."
+    },
+    {
+        "Name_na": "Performer",
+        "Description_na": "Music, acting or dance, you adore the thrill of an Inspired Performance, aspiring towards Stage Mastery.",
+        "FlavorText_na": "The roar of applause, the praise from the crowd - I live to perform!",
+        "Prerequisites_na": 5,
+        "BonusSkills_na": [
+            "Performance",
+            "Persuasion"
+        ],
+        "BonusProficiency_na": "Any musical instrument",
+        "Lv5FeatureName_na": "Inspired Performance",
+        "Lv5FeatureDesc_na": "Thrice daily you may perform in a way that motivates or demotivates a target:\n- Increase or decrease the success chance of a roll by 10%.\n- Grant +2 or -2 to one of the target's stats for one hour.\n- Grant temporary HP equal to your level, lasting until depleted.",
+        "Lv15FeatureName_na": "Stage Mastery",
+        "Lv15FeatureDesc_na": "Add three sound or dance moves that you would not otherwise learn to your learnset. You may also use one of the following per day:\n- Dancer's Stride: When moving in combat, you may deal 10 damage to each foe you pass.\n- Soothing Serenade: Heal allies in the room for 4d6 HP, and cure any status conditions based on rage, confusion or fear.\n- Captivating Speech: Sway up to 10 pokémon within earshot, changing their attitude towards a target of your choosing up to three spaces on this scale: Hostile | Hated | Disliked | Neutral | Liked | Loved | Exalted"
+    },
+    {
+        "Name_na": "Rescuer",
+        "Description_na": "You've devoted your life to saving others with Emergency Healing and peerless Rescuer's Prowess.",
+        "FlavorText_na": "As long as there are pokémon in need, I'll be there to help out.",
+        "Prerequisites_na": 5,
+        "BonusSkills_na": [
+            "Medicine",
+            "Survival"
+        ],
+        "BonusProficiency_na": "Medical Kit",
+        "Lv5FeatureName_na": "Emergency Healing",
+        "Lv5FeatureDesc_na": "If your own HP is below 50%, any healing you apply to a target is doubled. You can use one of the following moves daily without knowing or being able to learn it: Heal Bell, Heal Pulse, Wide Guard, or Helping Hand. You can use said move once.",
+        "Lv15FeatureName_na": "Rescuer's Prowess",
+        "Lv15FeatureDesc_na": "When in the same dungeon as a pokémon that is in peril and that you aim to rescue, your Speed is doubled, your stats cannot be lowered by enemies, your critical hit chance is boosted to 20%, and you ignore difficult terrain when moving. You may select another target every 24 hours."
+    },
+    {
+        "Name_na": "Shadow Blade",
+        "Description_na": "A criminal by trade, you're known for Signature Weapon and cut-throat Bladed Mastery.",
+        "FlavorText_na": "Rejected from society, I embrace the lawless wilds. No pokémon will govern me.",
+        "Prerequisites_na": 5,
+        "BonusSkills_na": [
+            "Athletics",
+            "Stealth"
+        ],
+        "BonusProficiency_na": "Melee Weapons",
+        "Lv5FeatureName_na": "Signature Weapon",
+        "Lv5FeatureDesc_na": "You cannot permanently lose your chosen signature weapon; it always finds a way back to you. Add any 3 of the following tags: +1.5xdmg, +(your species), +Struct, +ACC, +CRIT10, Fixed.",
+        "Lv15FeatureName_na": "Bladed Mastery",
+        "Lv15FeatureDesc_na": "Upon taking this, add any three of the following tags to your weapon: 2(X) (double the weapon's range), +(any species) (can be taken multiple times), (Any type), CRIT50 (replaces any other critical hit tags), (Any status)30, Splash, Return."
+    },
+    {
+        "Name_na": "Thief",
+        "Description_na": "You're a pick-purse known to Steal Hearts and perform Artistic Escapes.",
+        "FlavorText_na": "All the world is mine, so I help myself: only treasure can rival my brilliance.",
+        "Prerequisites_na": 5,
+        "BonusSkills_na": [
+            "Finesse",
+            "Stealth"
+        ],
+        "BonusProficiency_na": "Thieves' Tools",
+        "Lv5FeatureName_na": "Steal Hearts",
+        "Lv5FeatureDesc_na": "After successfully stealing an item from a foe, you may choose to inflict the Infatuated or Confused status upon them, lasting 10 turns or 30 minutes outside of battle.",
+        "Lv15FeatureName_na": "Artistic Escapes",
+        "Lv15FeatureDesc_na": "In low visibility, such as dusk or fog, you may become totally invisible. Your invisibility ends if you attack or if visibility around you increases, though you can use your move action to become invisible again on your next turn. While invisible: you cannot be tracked by sight, sound, or scent; you receive a bonus of 20% to Perception rolls, to a maximum of 95%; all of your attacks that hit are critical hits; you ignore obstacles and enemy cover while moving and attacking."
+    }
+]

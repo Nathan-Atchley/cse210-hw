@@ -1,8 +1,4 @@
 namespace FinalProject.CharacterData;
-using FinalProject.View;
-using FinalProject.API;
-using FinalProject.CharacterData;
-using System.Reflection.Metadata;
 
 public enum StatArrayType_na
 {

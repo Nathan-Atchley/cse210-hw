@@ -1,13 +1,13 @@
 namespace FinalProject.API;
-using FinalProject.View;
-using FinalProject.API;
-using FinalProject.CharacterData;
 public class MoveData
 {
-    public string Name { get; set; }
-    public string Type { get; set; }
-    public string DamageClass { get; set; }
-    public int? Power { get; set; }
-    public int? Accuracy { get; set; }
-    public int? PP { get; set; }
+    public string Name_na { get; set; }
+    public string Description_na { get; set; }
+    public int Prerequisites_na { get; set; }
+    public string Type_na { get; set; }
+    public string DamageClass_na { get; set; }
+    public int Power_na { get; set; }
+    public int Accuracy_na { get; set; }
+    public int PP_na { get; set; }
+    public string LearnMethod_na { get; set; }
 }

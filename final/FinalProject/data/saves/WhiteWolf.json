@@ -1,0 +1,44 @@
+{
+  "CharName_na": "WhiteWolf",
+  "SpeciesName_na": "eevee",
+  "Level_na": 2,
+  "Experience_na": 76,
+  "LevelPoints_na": 1,
+  "DestinyPoints_na": 0,
+  "Poke_na": 100,
+  "BackgroundName_na": "Explorer",
+  "AbilityName_na": "adaptability",
+  "Stats_na": {
+    "ATK": 1,
+    "DEF": 1,
+    "SPATK": 0,
+    "SPDEF": 0
+  },
+  "Skills_na": {
+    "Athletics": 15,
+    "Craft": 40,
+    "Endurance": 75,
+    "Finesse": 15,
+    "Medicine": 55,
+    "Perception": 30,
+    "Performance": 45,
+    "Persuasion": 75,
+    "Special Knowledge": 15,
+    "Stealth": 15,
+    "Survival": 15
+  },
+  "SpecialistFields_na": [
+    "Wildlife"
+  ],
+  "Traits_na": [
+    "Brick-Tough",
+    "Anchor"
+  ],
+  "EquippedMoveNames_na": [
+    "sand-attack",
+    "tackle",
+    "growl",
+    "covet"
+  ],
+  "Inventory_na": []
+}

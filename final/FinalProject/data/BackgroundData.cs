@@ -1,6 +1,4 @@
 namespace FinalProject.data;
-using FinalProject.View;
-using FinalProject.API;
 using FinalProject.CharacterData;
 public class BackgroundData : CharacterFeature
 {
@@ -14,7 +12,7 @@ public class BackgroundData : CharacterFeature
         Poke_na = poke_na;
         Items_na = items_na ?? new List<string>();
     }
-    public override void ApplyToCharacter()
+    public override void ApplyToCharacter(Character player_na)
     {
         
     }

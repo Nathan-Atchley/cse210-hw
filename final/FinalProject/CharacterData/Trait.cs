@@ -1,7 +1,4 @@
 namespace FinalProject.CharacterData;
-using FinalProject.View;
-using FinalProject.API;
-using FinalProject.CharacterData;
 public class Trait : CharacterFeature
 {
     public int Cost_na { get ; }
@@ -9,8 +6,16 @@ public class Trait : CharacterFeature
     {
         Cost_na = cost_na;
     }
-    public override void ApplyToCharacter()
+    public override void ApplyToCharacter(Character player_na)
     {
-        
+        if (Name_na.Equals("Brick-Tough", StringComparison.OrdinalIgnoreCase) || 
+            Name_na.Equals("Brick Tough", StringComparison.OrdinalIgnoreCase))
+        {
+            if (player_na.Stats_na != null)
+            {
+                int currentHp = player_na.Stats_na.GetValue("HP");
+                player_na.Stats_na.SetValue("HP", currentHp + 10);
+            }
+        }
     }
 }

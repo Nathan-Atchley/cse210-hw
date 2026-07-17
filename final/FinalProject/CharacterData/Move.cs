@@ -1,26 +1,28 @@
 namespace FinalProject.CharacterData;
-using FinalProject.View;
 using FinalProject.API;
-using FinalProject.CharacterData;
+using FinalProject.data;
+
 public class Move : CharacterFeature
 {
-    private string _Type_na;
-    private string _DamageClass_na;
-    private int _PP_na;
-    private int _Power_na;
-    private int _Accuracy_na;
-    private string _Range_na;
-    public Move(string name_na, string description_na, int prerequisites_na, string type_na, string damageClass_na, int pp_na, int power_na, int accuracy_na, string range_na) 
-        : base(name_na, description_na, prerequisites_na)
+    public string Type_na { get ; }
+    public string DamageClass_na { get ; }
+    public int PP_na { get ; }
+    public int Power_na { get ; }
+    public int Accuracy_na { get ; }
+    public string Range_na { get ; }
+    public string LearnMethod_na { get; }
+    public Move(MoveData moveData_na, DataStorage allData_na) 
+        : base(moveData_na.Name_na, moveData_na.Description_na, moveData_na.Prerequisites_na)
     {
-        _Type_na = type_na;
-        _DamageClass_na = damageClass_na;
-        _PP_na = pp_na;
-        _Power_na = power_na;
-        _Accuracy_na = accuracy_na;
-        _Range_na = range_na;
+        Type_na = moveData_na.Type_na;
+        DamageClass_na = moveData_na.DamageClass_na;
+        PP_na = moveData_na.PP_na;
+        Power_na = moveData_na.Power_na;
+        Accuracy_na = moveData_na.Accuracy_na;
+        Range_na = allData_na.GetRangeForMove(moveData_na.Name_na);
+        LearnMethod_na = moveData_na.LearnMethod_na;
     }
-    public override void ApplyToCharacter()
+    public override void ApplyToCharacter(Character player_na)
     {
         
     }

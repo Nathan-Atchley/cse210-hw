@@ -1,14 +1,12 @@
 namespace FinalProject.API;
-using FinalProject.View;
-using FinalProject.API;
-using FinalProject.CharacterData;
 using System;
 using System.Threading.Tasks;
+using FinalProject.data;
 
 public interface IPokeApi : IDisposable
 {
 
-    Task<PokemonData> GetPokemonDataAsync(string nameOrId);
+    Task<CharacterData.PokemonSpecies> GetPokemonDataAsync(string nameOrId, DataStorage allData_na);
 
-    Task<MoveData> GetMoveDataAsync(string moveName);
+    Task<MoveData> GetMoveDataAsync(string moveName, string learnMethod_na, int levelLearned_na = 0);
 }

@@ -1,7 +1,4 @@
 namespace FinalProject.CharacterData;
-using FinalProject.View;
-using FinalProject.API;
-using FinalProject.CharacterData;
 public class Background : CharacterFeature
 {
     public Trait GrantedTrait_na { get ; }
@@ -14,7 +11,7 @@ public class Background : CharacterFeature
         Poke_na = poke_na;
         Items_na = items_na ?? new List<string>();
     }
-    public override void ApplyToCharacter()
+    public override void ApplyToCharacter(Character player_na)
     {
         
     }

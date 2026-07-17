@@ -1,14 +1,11 @@
 namespace FinalProject.View;
-using FinalProject.View;
-using FinalProject.API;
 using FinalProject.CharacterData;
-using System;
 
 public static class StatAssignmentHandler
 {
     public static List<int> GetModifierArray()
     {
-        Console.WriteLine("Choose one of the following arrays:");
+        Console.WriteLine("\nChoose one of the following arrays:");
         Console.WriteLine(" 1. General (+1, +1, 0, 0)");
         Console.WriteLine(" 2. Special (+2, 0, 0, 0)");
         Console.WriteLine(" 3. Expert (+3, 0, 0, -1)");
@@ -56,7 +53,7 @@ public static class StatAssignmentHandler
         List<string> remainingStats_na = new List<string> { "ATK", "DEF", "SPATK", "SPDEF" };
         List<int> pool_na = [.. availableModifiers_na];
 
-        Console.WriteLine("Assign your array modifiers to your core stats.");
+        Console.WriteLine("\nAssign your array modifiers to your core stats.");
 
         foreach (int modifier_na in pool_na)
         {

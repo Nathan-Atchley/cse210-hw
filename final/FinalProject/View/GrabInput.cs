@@ -1,17 +1,29 @@
 namespace FinalProject.View;
-using FinalProject.View;
-using FinalProject.API;
-using FinalProject.CharacterData;
-using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.IO;
 using CsvHelper;
 using CsvHelper.Configuration;
 //Make sure to run this command in each new project when you copy it over:
 //dotnet add package CsvHelper --version 33.1.0
 public static class GrabInput
 {
+    public static bool Bool(string prompt)
+    {
+        while (true)
+        {
+            string input = String(prompt).Trim().ToLower();
+
+            if (input == "1" || input == "y" || input == "yes" || input == "true")
+            {
+                return true;
+            }
+            if (input == "0" || input == "n" || input == "no" || input == "false")
+            {
+                return false;
+            }
+
+            Console.WriteLine("Invalid input. Please enter y/n or 1/0.");
+        }
+    }
     public static List<String[]> CSV(string filename, bool HeaderRecord)
     {
         List<string[]> data = new List<string[]>();
@@ -75,6 +87,21 @@ public static class GrabInput
             }
         }
         return na_returnValue;
+    }
+    public static int IntInRange(string prompt, int min, int max)
+    {
+        while (true)
+        {
+            Console.Write(prompt);
+            string input = Console.ReadLine();
+
+            if (int.TryParse(input, out int result) && result >= min && result <= max)
+            {
+                return result;
+            }
+
+            Console.WriteLine($"Invalid input. Please enter a number between {min} and {max}.");
+        }
     }
 
     public static string String(string prompt)

@@ -1,12 +1,7 @@
 namespace FinalProject.API;
-using FinalProject.View;
-using FinalProject.API;
-using FinalProject.CharacterData;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using FinalProject.data;
 using PokeApiNet;
-
+//Mostly written by Gemini AI, but with some minor modifications
 public class PokeApi : IPokeApi
 {
     private readonly PokeApiClient _client;
@@ -17,8 +12,13 @@ public class PokeApi : IPokeApi
         _client = new PokeApiClient();
     }
 
-    public async Task<PokemonData> GetPokemonDataAsync(string nameOrId)
+    public async Task<CharacterData.PokemonSpecies> GetPokemonDataAsync(string nameOrId, DataStorage allData_na)
     {
+        CharacterData.PokemonSpecies pokemon_na = allData_na.getPokemon(nameOrId);
+        if (pokemon_na != null)
+        {
+            return pokemon_na;
+        }
         // 1. Fetch raw Pokemon object from PokeApiNet
         Pokemon pokemon = await _client.GetResourceAsync<Pokemon>(nameOrId.ToLowerInvariant());
 
@@ -28,20 +28,20 @@ public class PokeApi : IPokeApi
         // 2. Map raw PokeApiNet data into our clean PokemonData model
         var data = new PokemonData
         {
-            Id = pokemon.Id,
-            Name = pokemon.Name
+            Id_na = pokemon.Id,
+            Name_na = pokemon.Name
         };
 
         // Extract Types
         foreach (var t in pokemon.Types)
         {
-            data.Types.Add(t.Type.Name);
+            data.Types_na.Add(t.Type.Name);
         }
 
         // Extract Base Stats (hp, attack, defense, special-attack, special-defense, speed)
         foreach (var s in pokemon.Stats)
         {
-            data.BaseStats[s.Stat.Name] = s.BaseStat;
+            data.BaseStats_na[s.Stat.Name] = s.BaseStat;
         }
 
         // Extract Abilities
@@ -72,13 +72,40 @@ public class PokeApi : IPokeApi
             }
             catch (Exception){}
 
-            data.Abilities[abiltyName] = description;
+            data.Abilities_na[abiltyName] = description;
         }
 
-        return data;
+        var excludedVersionGroups_na = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+        {
+            "legends-arceus",
+            "legends-za"
+        };
+
+        foreach (var move_na in pokemon.Moves)
+        {
+            string moveName_na = move_na.Move.Name;
+
+            var validGroupDetails = move_na.VersionGroupDetails
+                    .Where(detail_na => !excludedVersionGroups_na.Contains(detail_na.VersionGroup.Name))
+                    .ToList();
+            if (!validGroupDetails.Any())
+                continue;
+
+            var latestDetail_na = validGroupDetails.Last();
+            int levelLearned_na = Math.Min((latestDetail_na.LevelLearnedAt / 5) + 1, 20);
+            string learnMethod_na = latestDetail_na.MoveLearnMethod.Name;
+            
+            MoveData moveData_na = await GetMoveDataAsync(moveName_na, learnMethod_na,levelLearned_na);
+            CharacterData.Move moveObject_na = new CharacterData.Move(moveData_na, allData_na);
+            data.Moves_na.Add(moveObject_na);
+        }
+
+        pokemon_na = new CharacterData.PokemonSpecies(data);
+        allData_na.loadPokemon(pokemon_na);
+        return pokemon_na;
     }
 
-    public async Task<MoveData> GetMoveDataAsync(string moveName)
+    public async Task<MoveData> GetMoveDataAsync(string moveName, string learnMethod_na, int levelLearned_na = 0)
     {
         PokeApiNet.Move move = await _client.GetResourceAsync<PokeApiNet.Move>(moveName.ToLowerInvariant());
 
@@ -87,12 +114,15 @@ public class PokeApi : IPokeApi
 
         return new MoveData
         {
-            Name = move.Name,
-            Type = move.Type.Name,
-            DamageClass = move.DamageClass.Name,
-            Power = move.Power,
-            Accuracy = move.Accuracy,
-            PP = move.Pp
+            Name_na = move.Name,
+            Type_na = move.Type.Name,
+            DamageClass_na = move.DamageClass.Name,
+            Power_na = (int)Math.Ceiling((move.Power ?? 0) / 10.0),
+            Accuracy_na = move.Accuracy ?? 0,
+            PP_na = move.Pp ?? 0,
+            LearnMethod_na = learnMethod_na,
+            Prerequisites_na = levelLearned_na,
+            Description_na = move.EffectEntries.FirstOrDefault(e => e.Language.Name == "en")?.Effect ?? ""
         };
     }
 

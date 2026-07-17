@@ -1,7 +1,4 @@
 namespace FinalProject.CharacterData;
-using FinalProject.View;
-using FinalProject.API;
-using FinalProject.CharacterData;
 public class Item
 {
     private string _Name_na;
