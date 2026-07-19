@@ -45,5 +45,17 @@ public class Destiny : CharacterFeature
     public void SetDestinyPatron(string patronChoice_na)
     {
         PatronChoice_na = patronChoice_na;
+
+        if (PatronOptions_na != null)
+        {
+            var matchedOption_na = PatronOptions_na.Find(option_na =>
+                option_na.Pokemon_na != null &&
+                option_na.Pokemon_na.Contains(patronChoice_na, StringComparer.OrdinalIgnoreCase)
+            );
+            if (matchedOption_na != null)
+            {
+                Lv5FeatureDesc_na = $"{Lv5FeatureDesc_na}\n{patronChoice_na}: {matchedOption_na.Effect_na}";
+            }
+        }
     }
 }

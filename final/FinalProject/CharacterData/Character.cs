@@ -16,6 +16,7 @@ public class Character
     public Destiny ChosenDestiny_na { get ; private set ; }
     public Ability ActiveAbility_na { get ; }
     public List<Trait> SelectedTraits_na { get ; }
+    public Move EggMove_na { get ; }
     public List<Move> EquippedMoves_na { get ; set ; }
     public Inventory EquipmentLog_na { get ; }
 

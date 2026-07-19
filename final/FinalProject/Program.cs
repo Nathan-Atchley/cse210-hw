@@ -33,9 +33,10 @@ class Program
             Console.WriteLine(" 2. Display Character Sheet");
             Console.WriteLine(" 3. Add Experience Points");
             Console.WriteLine(" 4. Spend Level Points");
-            Console.WriteLine(" 5. Save Current Character");
-            Console.WriteLine(" 6. Load Character File");
-            Console.WriteLine(" 7. Exit");
+            Console.WriteLine(" 5. Change Moves");
+            Console.WriteLine(" 6. Save Current Character");
+            Console.WriteLine(" 7. Load Character File");
+            Console.WriteLine(" 8. Exit");
             Console.WriteLine("---------------------------------------");
 
             int choice_na = GrabInput.Int("Select an option (1-7): ");
@@ -101,6 +102,10 @@ class Program
                     break;
 
                 case 5:
+                    player_na.SwapMoves();
+                    break;
+                    
+                case 6:
                     if (player_na == null)
                     {
                         Console.WriteLine("No active character to save.");
@@ -113,7 +118,7 @@ class Program
                     Console.ReadKey();
                     break;
 
-                case 6:
+                case 7:
                     var saveFiles = CharacterSaveManager.GetSaveFiles();
                     if (saveFiles.Count == 0)
                     {
@@ -142,7 +147,7 @@ class Program
                     Console.ReadKey();
                     break;
 
-                case 7:
+                case 8:
                     menuFlag_na = false;
                     Console.WriteLine("Goodbye!");
                     break;

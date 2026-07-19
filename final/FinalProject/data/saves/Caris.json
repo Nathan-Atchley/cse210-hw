@@ -1,0 +1,52 @@
+{
+  "CharName_na": "Caris",
+  "SpeciesName_na": "armaldo",
+  "Level_na": 5,
+  "Experience_na": 0,
+  "LevelPoints_na": 0,
+  "Destiny_na": "Archaeologist",
+  "ChosenPatron_na": null,
+  "Poke_na": 100,
+  "BackgroundName_na": "Researcher",
+  "AbilityName_na": "battle-armor",
+  "Stats_na": {
+    "ATK": 2,
+    "DEF": 1,
+    "SPDEF": 0,
+    "SPATK": -1
+  },
+  "Skills_na": {
+    "Athletics": 15,
+    "Craft": 35,
+    "Endurance": 65,
+    "Finesse": 15,
+    "Medicine": 45,
+    "Perception": 60,
+    "Performance": 15,
+    "Persuasion": 15,
+    "Special Knowledge": 90,
+    "Stealth": 15,
+    "Survival": 25
+  },
+  "SpecialistFields_na": [
+    "History",
+    "History"
+  ],
+  "Traits_na": [
+    "Anchor",
+    "Evaluator",
+    "Brick-Tough",
+    "Instructor"
+  ],
+  "Proficiencies_na": [
+    "Archaeology/Forensics Kit",
+    "Archaeology Kit"
+  ],
+  "EquippedMoveNames_na": [
+    "bug-bite",
+    "metal-claw",
+    "harden",
+    "ancient-power"
+  ],
+  "Inventory_na": []
+}

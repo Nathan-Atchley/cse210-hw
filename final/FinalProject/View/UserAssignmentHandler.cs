@@ -53,11 +53,7 @@ public static class UserAssignmentHandler
             i++;
             Console.WriteLine($" {i}. {ability_na.Name_na}\n      Description: {ability_na.Description_na}");
         }
-        int abilityChoice_na = GrabInput.Int($"Enter your choice (1-{i}): ");
-        while (abilityChoice_na < 1 || abilityChoice_na > i)
-        {
-            abilityChoice_na = GrabInput.Int($"Invalid selection. Please enter your choice (1-{i}): ");
-        }
+        int abilityChoice_na = GrabInput.IntInRange($"Enter your choice (1-{i}): ", 1, i);
         return pokemonSpecies_na.AvailableAbilities_na[abilityChoice_na - 1];
     }
     public static Background GetBackground(DataStorage allData_na)
@@ -140,7 +136,7 @@ public static class UserAssignmentHandler
         {
             for (int i = 0; i < 6; i++)
             {
-                int roll_na = GrabInput.Int($" {i+1}. Please enter the number you rolled: ") * 5;
+                int roll_na = GrabInput.Int($" {i+1}. Please enter the number you rolled * 5: ");
                 rolledValues_na.Add(roll_na);
             }
         }
@@ -213,7 +209,6 @@ public static class UserAssignmentHandler
         Console.WriteLine("\n--- Choose Your Destiny ---");
         List<Destiny> availableDestinies_na = allData_na.GetAllDestinies();
 
-        // 1. Display available destinies
         for (int i = 0; i < availableDestinies_na.Count; i++)
         {
             var dest_na = availableDestinies_na[i];
@@ -226,7 +221,6 @@ public static class UserAssignmentHandler
         int choice_na = GrabInput.IntInRange($"\nEnter the number of your Destiny choice (1-{availableDestinies_na.Count}): ", 1, availableDestinies_na.Count);
         Destiny baseDestiny_na = availableDestinies_na[choice_na - 1];
 
-        string? selectedPatron_na = null;
         if (baseDestiny_na.PatronOptions_na != null && baseDestiny_na.PatronOptions_na.Count > 0)
         {
             Console.WriteLine($"\n--- Choose Your Mythical Patron for the Mythbound Destiny ---");
@@ -236,8 +230,8 @@ public static class UserAssignmentHandler
                 Console.WriteLine($" [{i + 1}] {string.Join(" / ", patron_na.Pokemon_na)}: {patron_na.Effect_na}");
             }
 
-            int patronChoice_na = GrabInput.IntInRange($"Select a patron option (1-{baseDestiny_na.PatronOptions_na.Count}): ", 1, baseDestiny_na.PatronOptions_na.Count);
-            var chosenPatron_na = baseDestiny_na.PatronOptions_na[patronChoice_na - 1];
+            int userPatronChoice_na = GrabInput.IntInRange($"Select a patron option (1-{baseDestiny_na.PatronOptions_na.Count}): ", 1, baseDestiny_na.PatronOptions_na.Count);
+            var chosenPatron_na = baseDestiny_na.PatronOptions_na[userPatronChoice_na - 1];
 
             if (chosenPatron_na.Pokemon_na.Count > 1)
             {
@@ -247,43 +241,72 @@ public static class UserAssignmentHandler
                     Console.WriteLine($" [{i + 1}] {chosenPatron_na.Pokemon_na[i]}");
                 }
                 int pIdx = GrabInput.IntInRange($"Select patron (1-{chosenPatron_na.Pokemon_na.Count}): ", 1, chosenPatron_na.Pokemon_na.Count);
-                selectedPatron_na = chosenPatron_na.Pokemon_na[pIdx - 1];
+                baseDestiny_na.SetDestinyPatron(chosenPatron_na.Pokemon_na[pIdx - 1]);
             }
             else
             {
-                selectedPatron_na = chosenPatron_na.Pokemon_na[0];
+                baseDestiny_na.SetDestinyPatron(chosenPatron_na.Pokemon_na[0]);
             }
         }
 
         List<string> chosenSkills_na = new List<string>();
         Console.WriteLine($"\n--- Choose Skill Bonus for {baseDestiny_na.Name_na} ---");
-        for (int i = 0; i < baseDestiny_na.BonusSkills_na.Count; i++)
+
+
+
+        //Got some help from a friend on Discord @Jinnbow this next snippet is their code
+
+        List<string> availableSkillOptions_na = baseDestiny_na.BonusSkills_na
+            .Where(s =>
+            {
+                string key = ResolveSkillKey(s);
+                if (key != s) // if it's got "history" on it
+                {
+                    string field = s.Substring(s.IndexOf('(') + 1).TrimEnd(')');
+                    return player_na.Skills_na.SpecialistKnowledge_na
+                        .Contains(field, StringComparer.OrdinalIgnoreCase);
+                }
+                return true;
+            })
+            .ToList();
+
+        for (int i = 0; i < availableSkillOptions_na.Count; i++)
         {
-            int currentVal = player_na.Skills_na.GetValue(baseDestiny_na.BonusSkills_na[i]);
-            Console.WriteLine($" [{i + 1}] {baseDestiny_na.BonusSkills_na[i]} (Current: {currentVal})");
+            string key = ResolveSkillKey(availableSkillOptions_na[i]);
+            int currentVal = player_na.Skills_na.GetValue(key);
+            Console.WriteLine($" [{i + 1}] {availableSkillOptions_na[i]} (Current: {currentVal})");
         }
 
-        int userChoice_na = GrabInput.IntInRange($"Select skill to increase (1-{baseDestiny_na.BonusSkills_na.Count}): ", 1, baseDestiny_na.BonusSkills_na.Count);
-        string selectedSkill_na = baseDestiny_na.BonusSkills_na[userChoice_na - 1];
-        int currentVal_na = player_na.Skills_na.GetValue(selectedSkill_na);
+        int userChoice_na = GrabInput.IntInRange($"Select skill to increase (1-{availableSkillOptions_na.Count}): ", 1, availableSkillOptions_na.Count);
+        string selectedSkill_na = availableSkillOptions_na[userChoice_na - 1];
+        string selectedSkillKey_na = ResolveSkillKey(selectedSkill_na);
+        int currentVal_na = player_na.Skills_na.GetValue(selectedSkillKey_na);
+
+        // end of @Jinnbow's code snippet
 
         if (currentVal_na >= 95)
         {
-            Console.WriteLine($"\n{selectedSkill_na} is already at 95. You get +10 to a different skill of your choice!");
+            Console.WriteLine($"\n{selectedSkillKey_na} is already at 95. You get +10 to a different skill of your choice!");
             string altSkill_na = PromptSkillChoice(player_na, excludeSkill_na: selectedSkill_na, maxAllowedScore: 85);
             chosenSkills_na.Add(altSkill_na);
         }
         else if (currentVal_na == 90)
         {
-            Console.WriteLine($"\n{selectedSkill_na} is at 90. It will receive +5 to hit 95, and you may select another skill to receive the remaining +5.");
-            chosenSkills_na.Add(selectedSkill_na);
+            Console.WriteLine($"\n{selectedSkillKey_na} is at 90. It will receive +5 to hit 95, and you may select another skill to receive the remaining +5.");
+            chosenSkills_na.Add(selectedSkillKey_na);
 
             string altSkill_na = PromptSkillChoice(player_na, excludeSkill_na: selectedSkill_na, maxAllowedScore: 90);
             chosenSkills_na.Add(altSkill_na);
         }
         else
         {
-            chosenSkills_na.Add(selectedSkill_na);
+            chosenSkills_na.Add(selectedSkillKey_na);
+        }
+
+        if (player_na.Proficiencies_na.Contains(baseDestiny_na.BonusProficiency_na))
+        {
+            Console.WriteLine($"You already have proficiency in {baseDestiny_na.BonusProficiency_na}.");
+            baseDestiny_na.BonusProficiency_na = ChooseProficiency(player_na);
         }
 
         Destiny finalDestiny_na = new Destiny(
@@ -298,13 +321,23 @@ public static class UserAssignmentHandler
             baseDestiny_na.Lv15FeatureDesc_na,
             chosenSkills_na,
             baseDestiny_na.PatronOptions_na,
-            selectedPatron_na,
+            baseDestiny_na.PatronChoice_na,
             baseDestiny_na.Prerequisites_na
         );
 
         finalDestiny_na.ApplyToCharacter(player_na);
 
         return finalDestiny_na;
+    }
+
+    
+    // takes away the subfield so "Special Knowledge (History)" becomes "Special Knowledge"
+    private static string ResolveSkillKey(string skillName)
+    {
+        int parenIdx = skillName.IndexOf('(');
+        if (parenIdx > 0)
+            return skillName.Substring(0, parenIdx).Trim();
+        return skillName;
     }
 
     private static string PromptSkillChoice(Character player_na, string excludeSkill_na, int maxAllowedScore)
@@ -331,7 +364,8 @@ public static class UserAssignmentHandler
         {
             "Herbalist's Kit",
             "Medical Kit",
-            "Archaeology/Forensics Kit",
+            "Archaeology Kit",
+            "Forensics Kit",
             "Camping Gear",
             "Cooking Equipment",
             "Artisan Tools",
