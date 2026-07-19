@@ -8,6 +8,7 @@ public class Destiny : CharacterFeature
     public string Lv5FeatureDesc_na { get; set; }
     public string Lv15FeatureName_na { get; set; }
     public string Lv15FeatureDesc_na { get; set; }
+#pragma warning disable CS8632 // The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.
     public List<MythicalPatronOption>? PatronOptions_na { get; private set; }
     public string? PatronChoice_na { get; private set;}
     public List<string> ChosenSkills_na { get ; private set ;}
