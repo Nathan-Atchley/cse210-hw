@@ -161,31 +161,32 @@ public static class ViewPrint
     }
     static async Task<CharacterData.PokemonSpecies> PullPokemonData(string pkmnSpecies_na, DataStorage allData_na)
     {
-        try
-        {
-            return await ConsoleSpinner.RunWithLoadingAsync(
-                $"Fetching {pkmnSpecies_na}'s data from PokeAPI",
-                async () =>
+        return await ConsoleSpinner.RunWithLoadingAsync(
+            $"Fetching {pkmnSpecies_na}'s data from PokeAPI",
+            async () =>
+            {
+                try
                 {
                     using (IPokeApi apiService = new PokeApi())
                     {
                         CharacterData.PokemonSpecies pkmn_na = await apiService.GetPokemonDataAsync(pkmnSpecies_na, allData_na);
                         return pkmn_na;
                     }    
-                    
                 }
-            );
-        }
-        catch (HttpRequestException)
-        {
-            Console.WriteLine($"Error: Could not find Pokemon '{pkmnSpecies_na}'.");
-            return null;
-        }
-        catch (Exception error_na)
-        {
-            Console.WriteLine($"An unexpected error occurred: {error_na.Message}");
-            return null;
-        }
+                catch (HttpRequestException)
+                {
+                    Console.WriteLine($"\nError: Could not find Pokemon '{pkmnSpecies_na}'. Try again.");
+                    return null;
+                }
+                catch (Exception error_na)
+                {
+                    Console.WriteLine($"An unexpected error occurred: {error_na.Message}");
+                    return null;
+                }
+
+                
+            }
+        );
     }
     public static string CapitalizeWord(string input)
     {
